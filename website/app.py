@@ -12,20 +12,28 @@ def home():
     df = pd.read_csv(DATA_PATH)
     data = df.to_dict(orient='records')
     columns = df.columns.tolist()
-    
-    # Assume "position" is the column we want to filter on
-    if 'position' in df.columns:
-        # Extract unique positions
-        positions = sorted(df['position'].dropna().unique().tolist())
-    else:
-        positions = []
 
-    # Apply filter if provided
-    filter_value = request.args.get('filter')
-    if filter_value and filter_value.lower() != 'all':
-        data = [row for row in data if str(row.get('position', '')).lower() == filter_value.lower()]
+    # Extract unique positions and teams if they exist
+    positions = sorted(df['position'].dropna().unique().tolist()) if 'position' in df.columns else []
+    teams = sorted(df['team'].dropna().unique().tolist()) if 'team' in df.columns else []
 
-    return render_template('home.html', columns=columns, data=data, positions=positions)
+    # Get filter values from query parameters
+    filter_position = request.args.get('filter_position', 'all')
+    filter_team = request.args.get('filter_team', 'all')
+
+    # Apply filters if set
+    if filter_position.lower() != 'all':
+        data = [row for row in data if str(row.get('position', '')).lower() == filter_position.lower()]
+    if filter_team.lower() != 'all':
+        data = [row for row in data if str(row.get('team', '')).lower() == filter_team.lower()]
+
+    return render_template('home.html', 
+                           columns=columns, 
+                           data=data, 
+                           positions=positions, 
+                           teams=teams,
+                           selected_position=filter_position,
+                           selected_team=filter_team)
 
 @app.route('/blog')
 def blog():

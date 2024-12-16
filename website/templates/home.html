@@ -3,13 +3,25 @@
 <h1 class="mb-4">DraftKings Projections</h1>
 
 <div class="mb-3 d-flex align-items-center">
-    <form method="get" class="me-3">
-        <div class="input-group">
-            <label class="input-group-text" for="filter">Filter:</label>
-            <select class="form-select" name="filter" id="filter" onchange="this.form.submit()">
-                <option value="all" {% if request.args.get('filter','all') == 'all' %}selected{% endif %}>All</option>
+    <form method="get" class="me-3 d-flex align-items-center">
+        <!-- Filter by Position -->
+        <div class="input-group me-3">
+            <label class="input-group-text" for="filter_position">Position</label>
+            <select class="form-select" name="filter_position" id="filter_position" onchange="this.form.submit()">
+                <option value="all" {% if selected_position == 'all' %}selected{% endif %}>All</option>
                 {% for p in positions %}
-                <option value="{{ p }}" {% if request.args.get('filter') == p %}selected{% endif %}>{{ p }}</option>
+                <option value="{{ p }}" {% if selected_position == p %}selected{% endif %}>{{ p }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <!-- Filter by Team -->
+        <div class="input-group me-3">
+            <label class="input-group-text" for="filter_team">Team</label>
+            <select class="form-select" name="filter_team" id="filter_team" onchange="this.form.submit()">
+                <option value="all" {% if selected_team == 'all' %}selected{% endif %}>All</option>
+                {% for t in teams %}
+                <option value="{{ t }}" {% if selected_team == t %}selected{% endif %}>{{ t }}</option>
                 {% endfor %}
             </select>
         </div>
