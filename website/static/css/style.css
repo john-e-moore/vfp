@@ -1,0 +1,31 @@
+body {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.navbar.navbar-dark.bg-primary {
+    background-color: #2b6cb0 !important;
+}
+.nav-link {
+    color: #fff !important;
+}
+.nav-link:hover {
+    color: #ff9800 !important;
+}
+
+/* Ensure sorting arrows align neatly with column headers */
+.dataTables_wrapper th {
+    white-space: nowrap;
+    text-align: left;
+    vertical-align: middle;
+    position: relative;
+}
+
+/* Adjust the positioning of the DataTables sorting icons */
+.dataTables_wrapper thead .sorting:after, 
+.dataTables_wrapper thead .sorting_asc:after, 
+.dataTables_wrapper thead .sorting_desc:after {
+    margin-left: 0.3em;
+    top: 0.1em;
+    position: relative;
+}
