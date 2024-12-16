@@ -27,9 +27,9 @@ def home():
 
     return render_template('home.html', columns=columns, data=data, positions=positions)
 
-@app.route('/docs')
-def docs():
-    return render_template('docs.html')
+@app.route('/blog')
+def blog():
+    return render_template('blog.html')
 
 @app.route('/contact')
 def contact():
