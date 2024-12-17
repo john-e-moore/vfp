@@ -1,2 +1,2 @@
-# Example post #1
-Blah blah blah
+# The Market is Better Than You
+Content here.
