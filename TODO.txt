@@ -1,0 +1,3 @@
+* Blog: It's Over: why market-derived projections are more accurate.
+* Blog: disagree with a projection? go bet the prop.
+* Deploy on pws webserver
