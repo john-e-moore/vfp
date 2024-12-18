@@ -1,31 +1,68 @@
-body {
-    background-color: #f4f4f4;
-    color: #333;
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #333; /* match the footer dark grey */
+    color: #eee;
 }
 
-.navbar.navbar-dark.bg-primary {
-    background-color: #2b6cb0 !important;
-}
-.nav-link {
-    color: #fff !important;
-}
-.nav-link:hover {
-    color: #ff9800 !important;
+body.dark-mode .navbar {
+    background-color: #333 !important;
 }
 
-/* Ensure sorting arrows align neatly with column headers */
-.dataTables_wrapper th {
-    white-space: nowrap;
-    text-align: left;
-    vertical-align: middle;
-    position: relative;
+body.dark-mode .nav-link {
+    color: #eee !important;
 }
 
-/* Adjust the positioning of the DataTables sorting icons */
-.dataTables_wrapper thead .sorting:after, 
-.dataTables_wrapper thead .sorting_asc:after, 
-.dataTables_wrapper thead .sorting_desc:after {
-    margin-left: 0.3em;
-    top: 0.1em;
-    position: relative;
+body.dark-mode .nav-link:hover {
+    color: #fff !important; 
+}
+
+body.dark-mode main.container {
+    color: #eee;
+}
+
+body.dark-mode footer {
+    background-color: #333;
+    color: #eee;
+}
+
+/* Tables in dark mode */
+body.dark-mode .table {
+    color: #eee; 
+    background-color: #333;
+}
+body.dark-mode .table-striped > tbody > tr:nth-of-type(odd) > * {
+    background-color: #3a3a3a;
+}
+body.dark-mode .table-hover tbody tr:hover {
+    background-color: #454545;
+}
+body.dark-mode .table thead th {
+    background-color: #444;
+    color: #eee;
+}
+
+/* Form elements in dark mode */
+body.dark-mode .input-group-text,
+body.dark-mode .form-select {
+    background-color: #444;
+    color: #eee;
+    border-color: #555;
+}
+
+/* Buttons in dark mode */
+body.dark-mode a.btn-outline-secondary {
+    color: #ccc;
+    border-color: #555;
+}
+body.dark-mode a.btn-outline-secondary:hover {
+    color: #fff;
+    background-color: #555;
+    border-color: #666;
+}
+
+/* Alerts in dark mode */
+body.dark-mode .alert.alert-info {
+    background-color: #444;
+    color: #eee;
+    border-color: #555;
 }
