@@ -1,2 +1,3 @@
-# Disagree? Go Bet the Prop!
-Content here.
+# Why Hasn't This Been Done?
+Short answer: It kills the existing fantasy projections business model.
+

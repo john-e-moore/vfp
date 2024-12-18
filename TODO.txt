@@ -1,5 +1,7 @@
-* Blog: It's Over: why market-derived projections are more accurate.
-* Blog: disagree with a projection? go bet the prop.
+* Dark mode
+* Logo icon (betting chips?), logo + words, 3-letter logo link & DFS patch.
 * Set up google workspace email for vegasfantasyprojections.com
 * Deploy on pws webserver with real secret key on server instead of in app.py 
 (or should I look for heroku or some other even easier way?)
+* Deploy DK job w/ proxies
+* Scrape FD props

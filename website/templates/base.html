@@ -16,33 +16,29 @@
 <body class="d-flex flex-column h-100">
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary" style="background-color:#2b6cb0 !important;">
         <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="{{ url_for('home') }}">VegasFantasyProjections</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
                     aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-                <ul class="navbar-nav mx-auto">
-                  <li class="nav-item">
-                    <a class="navbar-brand fw-bold" href="{{ url_for('home') }}">Vegas Fantasy Projections</a>
-                  </li>
-                </ul>
                 <ul class="navbar-nav ml-auto">
-                  <li class="nav-item">
-                      <a class="nav-link" href="{{ url_for('projections') }}">Projections</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="{{ url_for('contact') }}">Contact</a>
-                  </li>
-                  {% if current_user.is_authenticated %}
-                  <li class="nav-item">
-                      <a class="nav-link" href="{{ url_for('logout') }}">Logout</a>
-                  </li>
-                  {% else %}
-                  <li class="nav-item">
-                      <a class="nav-link" href="{{ url_for('login') }}">Login</a>
-                  </li>
-                  {% endif %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('projections') }}">Projections</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('contact') }}">Contact</a>
+                    </li>
+                    {% if current_user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('logout') }}">Logout</a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('login') }}">Login</a>
+                    </li>
+                    {% endif %}
                 </ul>
             </div>
         </div>
