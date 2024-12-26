@@ -1,4 +1,5 @@
-* Dark mode
+* Add email for signup
+* Deploy on Heroku (real secret key)
 * Logo icon (betting chips?), logo + words, 3-letter logo link & DFS patch.
 * Set up google workspace email for vegasfantasyprojections.com
 * Deploy on pws webserver with real secret key on server instead of in app.py 
